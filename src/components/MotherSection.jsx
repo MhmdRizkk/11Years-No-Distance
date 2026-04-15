@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 import CinematicText from './CinematicText';
+import { photos } from '../data/photos';
 
 function MotherSection() {
   return (
     <section className="section-shell">
       <motion.div
-        className="relative overflow-hidden rounded-3xl border border-rose-200/20 bg-gradient-to-br from-rose-300/10 via-orange-100/5 to-amber-200/10 p-8 shadow-rose md:p-14"
+        className="relative min-h-[500px] overflow-hidden rounded-3xl border border-rose-200/20 bg-gradient-to-br from-rose-300/10 via-orange-100/5 to-amber-200/10 px-8 py-12 shadow-rose md:min-h-[600px] md:px-14 md:py-16"
         initial={{ opacity: 0, y: 38 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.35 }}
@@ -21,6 +22,18 @@ function MotherSection() {
         <p className="mt-7 max-w-3xl text-lg text-rose-50/90">
           Watching you become a mother made everything clearer. The love that raised me is now shaping her world.
         </p>
+        <motion.figure
+          className="mt-10 overflow-hidden rounded-2xl border border-white/20"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: 0.65, delay: 0.15 }}
+        >
+          <div className="min-h-[320px] md:min-h-[420px]">
+            <img src={photos[11].src} alt={photos[11].alt} className="h-full w-full object-cover object-center" loading="lazy" decoding="async" />
+          </div>
+          <figcaption className="bg-black/40 px-4 py-3 text-sm text-rose-50/90">{photos[11].caption}</figcaption>
+        </motion.figure>
       </motion.div>
     </section>
   );

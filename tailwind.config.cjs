@@ -11,8 +11,8 @@ module.exports = {
         glowRose: '#ff8eb6'
       },
       fontFamily: {
-        display: ['Sora', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        body: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif']
+        display: ['Playfair Display', 'ui-serif', 'Georgia', 'serif'],
+        body: ['Plus Jakarta Sans', 'ui-sans-serif', 'system-ui', 'sans-serif']
       },
       boxShadow: {
         glow: '0 0 35px rgba(114, 147, 255, 0.35)',

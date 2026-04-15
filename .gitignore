@@ -1,22 +1,17 @@
-# Dependencies
 node_modules/
 
-# Build outputs
 dist/
 build/
 
-# Env files
 .env
 .env.*
 !.env.example
 
-# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# OS/editor
 .DS_Store
 Thumbs.db
 .vscode/
@@ -24,7 +19,6 @@ Thumbs.db
 *.swp
 *.swo
 
-# Local media assets (optional/private)
 public/audio/*.mp3
 public/audio/*.wav
 public/audio/*.m4a

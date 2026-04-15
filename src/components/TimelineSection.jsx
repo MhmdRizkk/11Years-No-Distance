@@ -1,18 +1,22 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import { photos } from '../data/photos';
 
 const stages = [
   {
     label: 'School',
-    text: 'You were already working hard while still making sure I had what I needed.'
+    text: 'You were already working hard while still making sure I had what I needed.',
+    photo: photos[6]
   },
   {
     label: 'University',
-    text: 'You kept pushing me forward, even when I resisted every piece of advice.'
+    text: 'You kept pushing me forward, even when I resisted every piece of advice.',
+    photo: photos[9]
   },
   {
     label: 'First Job',
-    text: 'You taught me responsibility, not by words alone, but by example.'
+    text: 'You taught me responsibility, not by words alone, but by example.',
+    photo: photos[4]
   }
 ];
 
@@ -52,7 +56,10 @@ function TimelineSection() {
               whileHover={{ scale: 1.02 }}
             >
               <p className="text-sm tracking-[0.2em] text-glowBlue">{stage.label.toUpperCase()}</p>
-              <p className="mt-3 text-lg text-slate-100">{stage.text}</p>
+              <div className="mt-3 grid gap-4 md:grid-cols-[1fr,180px] md:items-center">
+                <p className="text-lg text-slate-100">{stage.text}</p>
+                <img src={stage.photo.src} alt={stage.photo.alt} className="h-28 w-full rounded-xl object-cover" loading="lazy" decoding="async" />
+              </div>
             </motion.div>
           ))}
         </div>
